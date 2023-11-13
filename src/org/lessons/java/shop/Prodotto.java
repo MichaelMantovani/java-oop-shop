@@ -35,7 +35,7 @@ public class Prodotto {
 		return this.nome;
 	}
 	
-	public String getFullNome() {
+	public String getCodiceNome() {
 		return this.codice + "-" + this.nome;
 	}
 	
@@ -71,8 +71,9 @@ public class Prodotto {
 	public String toString() {
 		// TODO Auto-generated method stub
 		return "Prodotto:\n"
-		+ "codice: " + getCodice() + "\n"
+		+ "Codice: " + getCodice() + "\n"
 		+ "Nome: " + getNome() + "\n"
+		+ "Codice-Nome :" + getCodiceNome() + "\n"
 		+ "descrizione: " + getDescrizione() + "\n"
 		+ "Prezzo senza Iva : € " + String.format("%.2f", getPrezzoBase()) + "\n"
 		+ "IVA: " + String.format("%.2f", getIVA()) + "\n"
