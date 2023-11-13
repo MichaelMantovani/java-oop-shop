@@ -29,6 +29,7 @@ public class Prodotto {
 		return this.codice;
 	}
 	
+//	Getter per formattare il codice
 	public String getCodiceCompleto() {	
 		return String.format("%08d", this.codice);
 	}
