@@ -35,6 +35,10 @@ public class Prodotto {
 		return this.nome;
 	}
 	
+	public String getFullNome() {
+		return this.codice + "-" + this.nome;
+	}
+	
 	public void setDescrizione(String descrizione) {
 		this.descrizione = descrizione;
 	}
