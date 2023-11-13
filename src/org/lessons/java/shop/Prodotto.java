@@ -85,9 +85,9 @@ public class Prodotto {
 		// TODO Auto-generated method stub
 		return "Prodotto:\n"
 		+ "Codice: " + getCodice() + "\n"
-		+ "Codice completo: " + getCodiceCompleto() + "\n"
 		+ "Nome: " + getNome() + "\n"
-		+ "Codice-Nome :" + getCodiceNome() + "\n"
+		+ "Codice completo: " + getCodiceCompleto() + "\n"
+		+ "Codice-Nome : " + getCodiceNome() + "\n"
 		+ "descrizione: " + getDescrizione() + "\n"
 		+ "Prezzo senza Iva : € " + String.format("%.2f", getPrezzoBase()) + "\n"
 		+ "IVA: " + String.format("%.2f", getIVA()) + "\n"
