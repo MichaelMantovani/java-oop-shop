@@ -1,5 +1,7 @@
 package org.lessons.java.shop;
 
+import java.util.Random;
+
 public class Prodotto {
 
 	private int codice;
@@ -8,7 +10,7 @@ public class Prodotto {
 	private float prezzo;
 	private float IVA;
 	
-	public Prodotto(int codice, String nome, String descrizione, float prezzo, float IVA ) {
+	public Prodotto(String nome, String descrizione, float prezzo, float IVA ) {
 		setCodice(codice);
 		setNome(nome);
 		setDescrizione(descrizione);
@@ -17,7 +19,8 @@ public class Prodotto {
 	}
 	
 	private void  setCodice(int codice) {
-		this.codice = codice;
+		Random rdn = new Random ();
+		this.codice = rdn.nextInt(100);
 	}
 	
 	public int getCodice() {
