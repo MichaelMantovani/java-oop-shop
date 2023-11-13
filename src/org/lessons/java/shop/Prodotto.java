@@ -14,7 +14,7 @@ public class Prodotto {
 		setCodice(codice);
 		setNome(nome);
 		setDescrizione(descrizione);
-		setPrezzo(prezzo);
+		setPrezzoBase(prezzo);
 		setIVA(IVA);
 	}
 	
@@ -43,12 +43,16 @@ public class Prodotto {
 		return this.descrizione;
 	}
 	
-	public void setPrezzo (float prezzo) {
+	public void setPrezzoBase (float prezzo) {
 		this.prezzo = prezzo;
 	}
 	
-	public float getPrezzo() {
+	public float getPrezzoBase() {
 		return this.prezzo;
+	}
+	
+	public float getPrezzo() {
+		return this.prezzo + this.prezzo * (this.IVA / 100);
 	}
 	
 	public void setIVA(float IVA) {
@@ -66,7 +70,8 @@ public class Prodotto {
 		+ "codice: " + getCodice() + "\n"
 		+ "Nome: " + getNome() + "\n"
 		+ "descrizione: " + getDescrizione() + "\n"
-		+ "Prezzo: €" + getPrezzo() + "\n"
-		+ "IVA: " + getIVA();
+		+ "Prezzo senza Iva : € " + String.format("%.2f", getPrezzoBase()) + "\n"
+		+ "IVA: " + String.format("%.2f", getIVA()) + "\n"
+		+ "Prezzo con Iva: € " + String.format("%.2f", getPrezzo());
 	}
 }
