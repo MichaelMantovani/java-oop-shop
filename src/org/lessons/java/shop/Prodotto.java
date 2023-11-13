@@ -22,11 +22,15 @@ public class Prodotto {
 //	Getter e setter per il codice
 	private void  setCodice(int codice) {
 		Random rdn = new Random ();
-		this.codice = rdn.nextInt(100);
+		this.codice = rdn.nextInt(1000000);
 	}
 	
 	public int getCodice() {
 		return this.codice;
+	}
+	
+	public String getCodiceCompleto() {	
+		return String.format("%08d", this.codice);
 	}
 	
 //	Getter e setter per il nome
@@ -81,6 +85,7 @@ public class Prodotto {
 		// TODO Auto-generated method stub
 		return "Prodotto:\n"
 		+ "Codice: " + getCodice() + "\n"
+		+ "Codice completo: " + getCodiceCompleto() + "\n"
 		+ "Nome: " + getNome() + "\n"
 		+ "Codice-Nome :" + getCodiceNome() + "\n"
 		+ "descrizione: " + getDescrizione() + "\n"
